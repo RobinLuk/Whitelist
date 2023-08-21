@@ -1,17 +1,6 @@
-local whitelistIDs = {
-	1230195383,
+{
+   "myCafe":{
+      "Mr_Builder07":1230195383,
+      "taco_fard":478346212
+   }
 }
-
-for i = 1,#whitelistIDs do
-	local ID = whitelistIDs[i]
-	
-	if game.CreatorType == Enum.CreatorType.User then
-		if game.CreatorId == ID then
-			print("IT | Licence found for myCafe")
-		end
-	elseif game.CreatorType == Enum.CreatorType.Group then
-		if game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id == ID then
-			print("IT | Licence found for myCafe")
-		end
-	end
-end
